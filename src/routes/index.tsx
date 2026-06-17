@@ -4,6 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import { Section, SectionHeader } from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import heroHoney from "@/assets/hero-honey.jpg";
+import logo from "@/assets/logo.png";
 import honeycomb from "@/assets/honeycomb.jpg";
 import therapyImg from "@/assets/therapy.jpg";
 import beekeeper from "@/assets/beekeeper.jpg";
@@ -19,11 +20,11 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: buildBilingualMeta({
       path: "/",
-      titleEn: "Shaqfa Honey Trading & Honey Therapy — Zarqa, Jordan",
-      titleAr: "شقفا لتجارة العسل والعلاج بالعسل — الزرقاء، الأردن",
-      descEn: "Premium raw honey, organic bee products and certified honey therapy from Zarqa, Jordan. Authentic healing rooted in tradition and science.",
-      descAr: "عسل خام فاخر ومنتجات نحل عضوية وجلسات علاج بالعسل معتمدة من الزرقاء، الأردن. شفاء أصيل يجمع بين التراث والعلم.",
-      image: heroHoney,
+      titleEn: "Jenin Apiaries — Honey Trading, Export & Therapeutic Blends | Jordan",
+      titleAr: "مناحل جنين — تجارة وتصدير العسل والخلطات العلاجية | الأردن",
+      descEn: "Jenin Apiaries: Leading honey producer and exporter in Jordan. Premium raw honey, therapeutic blends, wholesale & retail. Serving local and international markets with the finest bee products.",
+      descAr: "مناحل جنين: شركة رائدة في إنتاج وتصدير العسل الطبيعي في الأردن. عسل خام فاخر، خلطات علاجية متخصصة، بيع بالجملة والمفرق. نخدم الأسواق المحلية والدولية بأجود منتجات النحل.",
+      image: logo,
     }),
     links: buildLinks("/"),
     scripts: [
@@ -31,7 +32,7 @@ export const Route = createFileRoute("/")({
       jsonLdScript({
         "@context": "https://schema.org",
         "@type": "WebSite",
-        name: "Shaqfa Honey Trading & Honey Therapy",
+        name: "مناحل جنين — Jenin Apiaries",
         url: "/",
         inLanguage: ["ar", "en"],
       }),

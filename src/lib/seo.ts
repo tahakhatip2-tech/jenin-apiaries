@@ -33,7 +33,7 @@ export function buildBilingualMeta(s: BilingualSeo): MetaTag[] {
   const meta: MetaTag[] = [
     { title },
     { name: "description", content: description },
-    { name: "keywords", content: "عسل, عسل خام, العلاج بالعسل, الأردن, الزرقاء, غذاء ملكات, عكبر, حبوب لقاح, honey, raw honey, apitherapy, royal jelly, propolis, bee pollen, Jordan, Zarqa" },
+    { name: "keywords", content: "مناحل جنين, تجارة عسل, تصدير عسل, عسل بالجملة, عسل طبيعي, عسل خام, خلطات علاجية, الأردن, الزرقاء, غذاء ملكات, عكبر, حبوب لقاح, jenin apiaries, honey trading, honey export, wholesale honey, raw honey, therapeutic blends, bee products, Jordan, Zarqa, royal jelly, propolis, bee pollen, honey producer" },
     { name: "robots", content: "index, follow, max-image-preview:large" },
     { property: "og:type", content: s.type ?? "website" },
     { property: "og:title", content: title },
@@ -81,7 +81,7 @@ export function organizationJsonLd() {
     },
     areaServed: ["JO", "SA", "AE", "KW", "QA", "BH", "OM"],
     description:
-      "Premium honey trading and certified honey therapy (apitherapy) based in Zarqa, Jordan. Raw honey, royal jelly, propolis and bee pollen.",
+      "Jenin Apiaries: Leading producer and exporter of premium natural honey in Jordan. Offering wholesale and retail honey trading, specialized therapeutic blends, and high-quality bee products. Serving local and international markets.",
   };
 }
 
