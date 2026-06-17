@@ -1,0 +1,131 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-honey: var(--honey);
+  --color-amber-deep: var(--amber-deep);
+  --color-cream: var(--cream);
+  --font-display: "Cormorant Garamond", "Amiri", serif;
+  --font-sans: "Inter", "Cairo", system-ui, sans-serif;
+  --font-arabic: "Amiri", "Cairo", serif;
+}
+
+:root {
+  --radius: 0.75rem;
+  /* Honey-themed premium palette */
+  --background: oklch(0.992 0.008 85);            /* warm cream */
+  --foreground: oklch(0.22 0.04 60);              /* deep amber-brown */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.22 0.04 60);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.22 0.04 60);
+  --primary: oklch(0.78 0.17 78);                 /* golden yellow #F4B400 */
+  --primary-foreground: oklch(0.22 0.04 60);
+  --secondary: oklch(0.68 0.19 55);               /* honey orange #FF8C00 */
+  --secondary-foreground: oklch(0.99 0 0);
+  --muted: oklch(0.96 0.018 85);
+  --muted-foreground: oklch(0.45 0.04 60);
+  --accent: oklch(0.94 0.04 85);
+  --accent-foreground: oklch(0.22 0.04 60);
+  --destructive: oklch(0.6 0.22 27);
+  --destructive-foreground: oklch(0.99 0 0);
+  --border: oklch(0.88 0.025 80);
+  --input: oklch(0.9 0.02 80);
+  --ring: oklch(0.78 0.17 78);
+
+  --gold: oklch(0.78 0.17 78);
+  --honey: oklch(0.68 0.19 55);
+  --amber-deep: oklch(0.42 0.12 55);
+  --cream: oklch(0.98 0.012 85);
+
+  --gradient-gold: linear-gradient(135deg, oklch(0.82 0.17 80), oklch(0.7 0.2 55));
+  --gradient-hero: linear-gradient(135deg, oklch(0.22 0.04 60 / 0.85), oklch(0.35 0.08 55 / 0.55));
+  --gradient-soft: linear-gradient(180deg, oklch(0.98 0.012 85), oklch(0.94 0.04 85));
+  --shadow-gold: 0 20px 50px -20px oklch(0.7 0.2 55 / 0.45);
+  --shadow-elegant: 0 25px 60px -25px oklch(0.22 0.04 60 / 0.25);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-feature-settings: "ss01", "cv11";
+  }
+  html[dir="rtl"] body {
+    font-family: var(--font-arabic);
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+  html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3, html[dir="rtl"] h4 {
+    font-family: var(--font-arabic);
+    letter-spacing: 0;
+  }
+}
+
+@utility text-gradient-gold {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gradient-gold {
+  background: var(--gradient-gold);
+}
+
+@utility bg-gradient-soft {
+  background: var(--gradient-soft);
+}
+
+@utility shadow-gold {
+  box-shadow: var(--shadow-gold);
+}
+
+@utility shadow-elegant {
+  box-shadow: var(--shadow-elegant);
+}
+
+@utility honeycomb-pattern {
+  background-image:
+    radial-gradient(circle at 50% 50%, oklch(0.78 0.17 78 / 0.08) 2px, transparent 3px),
+    radial-gradient(circle at 0% 50%, oklch(0.78 0.17 78 / 0.08) 2px, transparent 3px),
+    radial-gradient(circle at 100% 50%, oklch(0.78 0.17 78 / 0.08) 2px, transparent 3px);
+  background-size: 40px 40px;
+}
